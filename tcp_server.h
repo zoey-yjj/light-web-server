@@ -9,7 +9,6 @@
 
 namespace http
 {
-
     class TcpServer
     {
     public:
@@ -20,7 +19,6 @@ namespace http
     private:
 
     };
-
 } 
 
 #endif
