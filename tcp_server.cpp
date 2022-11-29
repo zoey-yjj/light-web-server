@@ -20,4 +20,11 @@ namespace http
         }
         return 0;
     }
+
+    void TcpServer::closeServer()
+    {
+        close(m_socket);
+        close(m_new_socket);
+        exit(0);
+    }
 } 
