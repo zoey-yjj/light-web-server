@@ -62,4 +62,19 @@ namespace http
         close(m_new_socket);
         exit(0);
     }
+
+    void TcpServer::startListen()
+    {
+        if (listen(m_socket, 20) < 0)
+        {
+            exitWithError("Socket listen failed");
+        }
+
+        std::ostringstream ss;
+        ss << "\n*** Listening on ADDRESS: " 
+            << inet_ntoa(m_socketAddress.sin_addr) 
+            << " PORT: " << ntohs(m_socketAddress.sin_port) 
+            << " ***\n\n";
+        log(ss.str());
+    }
 } 
