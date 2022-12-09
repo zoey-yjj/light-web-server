@@ -9,6 +9,7 @@
 
 namespace http
 {
+
     class TcpServer
     {
     public:
@@ -32,6 +33,7 @@ namespace http
         std::string buildResponse();
         void sendResponse();
     };
+
 } 
 
 #endif
