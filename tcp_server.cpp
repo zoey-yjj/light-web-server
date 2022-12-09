@@ -101,4 +101,16 @@ namespace http
             exitWithError(ss.str());
         }
     }
+
+    long bytesSent;
+    bytesSent = write(m_new_socket, m_serverMessage.c_str(), m_serverMessage.size());
+
+    if (bytesSent == m_serverMessage.size())
+    {
+        log("------ Server Response sent to client ------\n\n");
+    }
+    else
+    {
+        log("Error sending response to client");
+    }
 } 
