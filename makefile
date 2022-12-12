@@ -8,8 +8,8 @@ else
 
 endif
 
-server: server_linux.cpp  ./tcp_server.cpp 
-	$(CXX) -o server  $^ $(CXXFLAGS) -lpthread -lmysqlclient
+server: main.cpp  ./server.cpp 
+	$(CXX) -o server  $^ $(CXXFLAGS) 
 
 clean:
 	rm  -r server
